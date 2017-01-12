@@ -1,0 +1,918 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Prompt-->
+        <scene sceneID="BdE-Z5-L1H">
+            <objects>
+                <viewController id="Ftb-Fx-klq" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Jtc-Xs-a1o"/>
+                        <viewControllerLayoutGuide type="bottom" id="Bip-nt-egO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yHg-al-6KZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="8Ds-es-ia0">
+                                <rect key="frame" x="66" y="204" width="243" height="260"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="oca-Gr-rDR">
+                                        <rect key="frame" x="0.0" y="0.0" width="243" height="36"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="happy" translatesAutoresizingMaskIntoConstraints="NO" id="C0M-3H-OMp">
+                                                <rect key="frame" x="0.0" y="0.0" width="35" height="36"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Kau-5r-BeI">
+                                                <rect key="frame" x="40" y="0.0" width="203" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="Characters"/>
+                                                <connections>
+                                                    <segue destination="Z41-go-LTO" kind="show" identifier="characterPrompt" id="pR5-op-mWh"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="frG-BI-5rh">
+                                        <rect key="frame" x="0.0" y="56" width="243" height="36"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="puppy" translatesAutoresizingMaskIntoConstraints="NO" id="jD1-Jc-uPU">
+                                                <rect key="frame" x="0.0" y="0.0" width="35" height="36"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Zxq-ea-5Dw">
+                                                <rect key="frame" x="40" y="0.0" width="203" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="Creatures"/>
+                                                <connections>
+                                                    <segue destination="Dci-x2-oMo" kind="show" identifier="creaturePrompt" id="B8l-1v-qSm"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Wki-iX-v6P">
+                                        <rect key="frame" x="0.0" y="112" width="243" height="36"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location" translatesAutoresizingMaskIntoConstraints="NO" id="Hme-WQ-S8g">
+                                                <rect key="frame" x="0.0" y="0.0" width="35" height="36"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="njk-9o-06a">
+                                                <rect key="frame" x="40" y="0.0" width="203" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="Locations"/>
+                                                <connections>
+                                                    <segue destination="QhX-dd-sAX" kind="show" id="qXU-vg-XW3"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="3Ep-Xq-iej">
+                                        <rect key="frame" x="0.0" y="168" width="243" height="36"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="object" translatesAutoresizingMaskIntoConstraints="NO" id="Liw-uI-MQS">
+                                                <rect key="frame" x="0.0" y="0.0" width="35" height="36"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="BYb-JB-T2E">
+                                                <rect key="frame" x="40" y="0.0" width="203" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="Objects"/>
+                                                <connections>
+                                                    <segue destination="XVE-lQ-HHd" kind="show" id="FMr-tW-8i6"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="1oB-8K-EPB">
+                                        <rect key="frame" x="0.0" y="224" width="243" height="36"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="situation" translatesAutoresizingMaskIntoConstraints="NO" id="bE2-we-LBV">
+                                                <rect key="frame" x="0.0" y="0.0" width="35" height="36"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Tcl-zC-BYi">
+                                                <rect key="frame" x="40" y="0.0" width="203" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="Situations"/>
+                                                <connections>
+                                                    <segue destination="2ky-Ep-ok4" kind="show" id="QRT-zW-PdQ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="C0M-3H-OMp" firstAttribute="centerX" secondItem="jD1-Jc-uPU" secondAttribute="centerX" id="4gS-4R-JJG"/>
+                                    <constraint firstItem="Liw-uI-MQS" firstAttribute="centerX" secondItem="bE2-we-LBV" secondAttribute="centerX" id="H1t-ce-BdM"/>
+                                    <constraint firstItem="jD1-Jc-uPU" firstAttribute="centerX" secondItem="Hme-WQ-S8g" secondAttribute="centerX" id="KRB-bd-cqC"/>
+                                    <constraint firstItem="Hme-WQ-S8g" firstAttribute="centerX" secondItem="Liw-uI-MQS" secondAttribute="centerX" id="Nvc-g8-myf"/>
+                                    <constraint firstItem="Kau-5r-BeI" firstAttribute="leading" secondItem="Zxq-ea-5Dw" secondAttribute="leading" id="OO7-Hu-MCC"/>
+                                    <constraint firstItem="frG-BI-5rh" firstAttribute="height" secondItem="oca-Gr-rDR" secondAttribute="height" id="bje-GL-pmI"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8Ds-es-ia0" firstAttribute="leading" secondItem="yHg-al-6KZ" secondAttribute="leadingMargin" constant="50" id="5Bo-8F-K9e"/>
+                            <constraint firstItem="8Ds-es-ia0" firstAttribute="centerX" secondItem="yHg-al-6KZ" secondAttribute="centerX" id="MDD-8z-TCc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8Ds-es-ia0" secondAttribute="trailing" constant="50" id="MJd-dP-1yO"/>
+                            <constraint firstItem="8Ds-es-ia0" firstAttribute="centerY" secondItem="yHg-al-6KZ" secondAttribute="centerY" id="gkL-0p-icT"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Prompt" id="OQR-kw-Vz8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DTs-db-6cd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1712.8" y="-1021.4392803598201"/>
+        </scene>
+        <!--Location-->
+        <scene sceneID="3Ya-dg-MzR">
+            <objects>
+                <viewController id="QhX-dd-sAX" customClass="LocationViewController" customModule="euakarn_liengtiraphan_project2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Gk4-3x-vs2"/>
+                        <viewControllerLayoutGuide type="bottom" id="hlf-dF-mqx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="raa-Bn-J8k">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to be inspired!" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Rc-Kj-HSR">
+                                <rect key="frame" x="16" y="276" width="343" height="115"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                <color key="textColor" red="0.48582029705503349" green="0.2441743099567375" blue="0.20523489963571268" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.92156862750000001" blue="0.87629283052013429" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="3Rc-Kj-HSR" firstAttribute="leading" secondItem="raa-Bn-J8k" secondAttribute="leadingMargin" id="1SI-Wy-sVe"/>
+                            <constraint firstItem="3Rc-Kj-HSR" firstAttribute="centerY" secondItem="raa-Bn-J8k" secondAttribute="centerY" id="CSh-SC-vu5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3Rc-Kj-HSR" secondAttribute="trailing" id="kDj-7C-CXf"/>
+                            <constraint firstItem="3Rc-Kj-HSR" firstAttribute="centerX" secondItem="raa-Bn-J8k" secondAttribute="centerX" id="trj-kU-53j"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="kXX-oW-Msn" appends="YES" id="lJ9-4m-Dpd"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" title="Location" id="jsH-VO-2XB">
+                        <barButtonItem key="rightBarButtonItem" title="Add Prompt" id="3qb-RA-WvJ">
+                            <connections>
+                                <segue destination="WDo-77-dYP" kind="show" id="CcC-Nr-pTJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="LocationPrompt" destination="3Rc-Kj-HSR" id="a5c-I8-DD5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NgM-Tr-N2X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="kXX-oW-Msn">
+                    <connections>
+                        <action selector="nextPrompt:" destination="QhX-dd-sAX" id="E1J-70-8gL"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="3726" y="-618"/>
+        </scene>
+        <!--Add Location Prompt-->
+        <scene sceneID="cCz-6l-ULH">
+            <objects>
+                <viewController id="WDo-77-dYP" customClass="LocationAddViewController" customModule="euakarn_liengtiraphan_project2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2nb-Ev-VcO"/>
+                        <viewControllerLayoutGuide type="bottom" id="5yD-Em-RlS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="I1U-r4-k6T">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="JaW-oV-uKW">
+                                <rect key="frame" x="16" y="99" width="343" height="484"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" text="Add your new object prompt here" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="20X-qR-hDv">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="469"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <gestureRecognizers/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" spellCheckingType="yes"/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="SGH-yf-zw1" appends="YES" id="2dN-lK-kT1"/>
+                                        </connections>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ND-J0-MDY">
+                                        <rect key="frame" x="0.0" y="484" width="343" height="0.0"/>
+                                        <state key="normal" title="Add to object prompt list"/>
+                                        <connections>
+                                            <action selector="addCreature:" destination="WDo-77-dYP" eventType="touchUpInside" id="bR2-tw-eue"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5yD-Em-RlS" firstAttribute="top" secondItem="JaW-oV-uKW" secondAttribute="bottom" constant="35" id="7F2-jb-OMb"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="JaW-oV-uKW" secondAttribute="leading" id="Es5-VY-a9V"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JaW-oV-uKW" secondAttribute="trailing" id="fbO-We-ZuL"/>
+                            <constraint firstItem="JaW-oV-uKW" firstAttribute="top" secondItem="2nb-Ev-VcO" secondAttribute="bottom" constant="35" id="fk8-Xe-mSX"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Location Prompt" id="z7D-uv-UB8"/>
+                    <connections>
+                        <outlet property="characterText" destination="20X-qR-hDv" id="2bf-HT-9Mc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YhU-wb-Jje" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="SGH-yf-zw1">
+                    <connections>
+                        <action selector="leaveKeyboard:" destination="WDo-77-dYP" id="oQ8-jc-BAO"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="4706" y="-693"/>
+        </scene>
+        <!--Objects-->
+        <scene sceneID="xj0-i5-VVD">
+            <objects>
+                <viewController id="XVE-lQ-HHd" customClass="ObjectsViewController" customModule="euakarn_liengtiraphan_project2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bNw-OY-bjK"/>
+                        <viewControllerLayoutGuide type="bottom" id="QSY-X5-OQ5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LfE-S9-A2B">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to be inspired" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sbG-Z5-HNi">
+                                <rect key="frame" x="16" y="276.5" width="343" height="115"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.050980392156862744" green="0.074509803921568626" blue="0.12941176470588234" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="sbG-Z5-HNi" firstAttribute="centerX" secondItem="LfE-S9-A2B" secondAttribute="centerX" id="DhK-Kh-dv6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="sbG-Z5-HNi" secondAttribute="trailing" id="Ift-W9-75N"/>
+                            <constraint firstItem="sbG-Z5-HNi" firstAttribute="leading" secondItem="LfE-S9-A2B" secondAttribute="leadingMargin" id="Jf0-GW-rgX"/>
+                            <constraint firstItem="sbG-Z5-HNi" firstAttribute="centerY" secondItem="LfE-S9-A2B" secondAttribute="centerY" id="MLN-tP-TxE"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="9Af-yc-WzE" appends="YES" id="4Zv-hR-vqz"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" title="Objects" id="CBe-uU-ZaP">
+                        <barButtonItem key="rightBarButtonItem" title="Add Prompts" id="fyO-WX-08N">
+                            <connections>
+                                <segue destination="jve-su-DQR" kind="show" id="wWP-Pg-gJW"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="objectsPrompt" destination="sbG-Z5-HNi" id="9gP-nT-fab"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KL2-4S-xWq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="9Af-yc-WzE">
+                    <connections>
+                        <action selector="nextPrompt:" destination="XVE-lQ-HHd" id="yXB-XJ-VZN"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="5276" y="98.50074962518741"/>
+        </scene>
+        <!--Add Object Prompt-->
+        <scene sceneID="WnF-pA-nx5">
+            <objects>
+                <viewController id="jve-su-DQR" customClass="ObjectsAddViewController" customModule="euakarn_liengtiraphan_project2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZmQ-BG-OxU"/>
+                        <viewControllerLayoutGuide type="bottom" id="j4Y-kE-nRg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vZL-z4-6kc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="RQX-i3-9xV">
+                                <rect key="frame" x="16" y="100" width="343" height="484"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" text="Add your new object prompt here" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="TbC-Bk-QgQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="469"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <gestureRecognizers/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" spellCheckingType="yes"/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="tUX-bf-q5A" appends="YES" id="kaw-E9-9ip"/>
+                                        </connections>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oEW-Si-QIt">
+                                        <rect key="frame" x="0.0" y="484" width="343" height="0.0"/>
+                                        <state key="normal" title="Add to object prompt list"/>
+                                        <connections>
+                                            <action selector="addCreature:" destination="jve-su-DQR" eventType="touchUpInside" id="Jgc-Yv-9UP"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="leadingMargin" secondItem="RQX-i3-9xV" secondAttribute="leading" id="1p6-fB-0GO"/>
+                            <constraint firstItem="j4Y-kE-nRg" firstAttribute="top" secondItem="RQX-i3-9xV" secondAttribute="bottom" constant="34" id="7e2-YH-lA9"/>
+                            <constraint firstItem="RQX-i3-9xV" firstAttribute="top" secondItem="ZmQ-BG-OxU" secondAttribute="bottom" constant="36" id="7mH-Sk-BK3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="RQX-i3-9xV" secondAttribute="trailing" id="CF7-y7-tBM"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Object Prompt" id="xJa-UD-xx5"/>
+                    <connections>
+                        <outlet property="characterText" destination="TbC-Bk-QgQ" id="WYw-ZZ-7iY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sup-4o-iMz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="tUX-bf-q5A">
+                    <connections>
+                        <action selector="leaveKeyboard:" destination="jve-su-DQR" id="8we-Pi-XdI"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="6066.3999999999996" y="98.50074962518741"/>
+        </scene>
+        <!--Situations-->
+        <scene sceneID="ZXW-pa-f7p">
+            <objects>
+                <viewController id="2ky-Ep-ok4" customClass="SituationViewController" customModule="euakarn_liengtiraphan_project2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="p3Q-xh-ms9"/>
+                        <viewControllerLayoutGuide type="bottom" id="oZm-v7-JnV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TUe-Hb-AVW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to be inspired" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TOn-D1-deA">
+                                <rect key="frame" x="16" y="276.5" width="343" height="115"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                <color key="textColor" red="0.1213455194" green="0.31911599359999998" blue="0.4652019069744967" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.80085467259999998" green="1" blue="0.96152178479999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="TOn-D1-deA" secondAttribute="trailing" id="6yY-3g-uz7"/>
+                            <constraint firstItem="TOn-D1-deA" firstAttribute="centerX" secondItem="TUe-Hb-AVW" secondAttribute="centerX" id="Go9-ev-UUT"/>
+                            <constraint firstItem="TOn-D1-deA" firstAttribute="leading" secondItem="TUe-Hb-AVW" secondAttribute="leadingMargin" id="aiR-58-dXV"/>
+                            <constraint firstItem="TOn-D1-deA" firstAttribute="centerY" secondItem="TUe-Hb-AVW" secondAttribute="centerY" id="oSZ-Iv-NH5"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="2D5-ua-kPD" appends="YES" id="qxP-gP-8rN"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" title="Situations" id="YIw-xa-kGq">
+                        <barButtonItem key="rightBarButtonItem" title="Add Prompts" id="QLV-hm-o5w">
+                            <connections>
+                                <segue destination="R5j-fV-TXd" kind="show" id="LXg-Cc-Fhs"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="situationPrompt" destination="TOn-D1-deA" id="WX7-9V-jPh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9x9-ve-RKb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="2D5-ua-kPD">
+                    <connections>
+                        <action selector="nextPrompt:" destination="2ky-Ep-ok4" id="JW9-x2-JaN"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="4447.1999999999998" y="834.33283358320841"/>
+        </scene>
+        <!--Add Situation Prompt-->
+        <scene sceneID="nk3-Ee-9yA">
+            <objects>
+                <viewController id="R5j-fV-TXd" customClass="SituationAddViewController" customModule="euakarn_liengtiraphan_project2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XLr-gg-TsS"/>
+                        <viewControllerLayoutGuide type="bottom" id="mWR-bh-koa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cyy-8k-EpM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="fe0-75-ULH">
+                                <rect key="frame" x="16" y="100" width="343" height="484"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" text="Add your new situation prompt here" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ndI-XW-BRr">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="469"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <gestureRecognizers/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" spellCheckingType="yes"/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="ccD-Pq-W0F" appends="YES" id="5Jg-ow-c8v"/>
+                                        </connections>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HA6-Tc-EWf">
+                                        <rect key="frame" x="0.0" y="484" width="343" height="0.0"/>
+                                        <state key="normal" title="Add to situation prompt list"/>
+                                        <connections>
+                                            <action selector="addCreature:" destination="R5j-fV-TXd" eventType="touchUpInside" id="ONc-Xl-gYC"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="fe0-75-ULH" secondAttribute="trailing" id="I4T-Fh-hB1"/>
+                            <constraint firstItem="fe0-75-ULH" firstAttribute="top" secondItem="XLr-gg-TsS" secondAttribute="bottom" constant="36" id="VcZ-TX-kGr"/>
+                            <constraint firstItem="mWR-bh-koa" firstAttribute="top" secondItem="fe0-75-ULH" secondAttribute="bottom" constant="34" id="k4V-7J-fEn"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="fe0-75-ULH" secondAttribute="leading" id="lYn-Gt-ejo"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Situation Prompt" id="WGq-WS-knc"/>
+                    <connections>
+                        <outlet property="characterText" destination="ndI-XW-BRr" id="3MR-jk-ldg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fes-zn-bMl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="ccD-Pq-W0F">
+                    <connections>
+                        <action selector="leaveKeyboard:" destination="R5j-fV-TXd" id="Lnn-ZI-iol"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="5234.3999999999996" y="832.53373313343332"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="hNz-n2-bh7">
+            <objects>
+                <viewController id="9pv-A4-QxB" customClass="Hello" customModule="euakarn_liengtiraphan_project2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
+                        <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pencilonly" translatesAutoresizingMaskIntoConstraints="NO" id="5iC-lc-n5p">
+                                <rect key="frame" x="75" y="221" width="224" height="397"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sparkr your inspirations using the art prompts from Sparkr. Choose one of the categories belong and start creating!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Kf-Ki-BtI">
+                                <rect key="frame" x="27" y="276" width="321" height="115"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="4uk-04-D6X">
+                                <rect key="frame" x="87" y="100" width="201" height="61"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <state key="normal" title="Let's get started!"/>
+                                <connections>
+                                    <action selector="constraint:" destination="9pv-A4-QxB" eventType="touchUpInside" id="IN9-vT-Nuo"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="4uk-04-D6X" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="80" id="6qB-iT-96L"/>
+                            <constraint firstItem="5iC-lc-n5p" firstAttribute="top" secondItem="4uk-04-D6X" secondAttribute="bottom" constant="60" id="8te-cC-jga"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="8Kf-Ki-BtI" secondAttribute="trailing" id="ImU-jh-Lh1"/>
+                            <constraint firstItem="4uk-04-D6X" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="71" id="Ncv-Iz-o14"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="4uk-04-D6X" secondAttribute="trailing" id="NfM-mQ-i4y"/>
+                            <constraint firstItem="4uk-04-D6X" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="guI-2u-GLJ"/>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="5iC-lc-n5p" secondAttribute="bottom" id="jtZ-R5-aM9"/>
+                            <constraint firstItem="5iC-lc-n5p" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="kMb-O7-q4x"/>
+                            <constraint firstItem="8Kf-Ki-BtI" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="11" id="qSe-Tf-zor"/>
+                            <constraint firstItem="8Kf-Ki-BtI" firstAttribute="centerY" secondItem="tsR-hK-woN" secondAttribute="centerY" id="tSV-RD-fO9"/>
+                            <constraint firstItem="8Kf-Ki-BtI" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="vgN-vw-ioC"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="Home" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="fade" destination="4uk-04-D6X" id="PDi-sU-M07"/>
+                        <outlet property="instructions" destination="8Kf-Ki-BtI" id="mS8-PT-Nlj"/>
+                        <outlet property="pencilslidedown" destination="jtZ-R5-aM9" id="qbM-kY-Knm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1223" y="-309"/>
+        </scene>
+        <!--Sketchbook-->
+        <scene sceneID="1Tb-Yl-gXH">
+            <objects>
+                <viewController title="Sketchbook" id="cE0-OU-VXl" customClass="ShareViewController" customModule="euakarn_liengtiraphan_project2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dfO-eT-Azp"/>
+                        <viewControllerLayoutGuide type="bottom" id="HEC-Dz-O22"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AFm-2G-zvp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZBC-Y5-atR">
+                                <rect key="frame" x="105.5" y="568" width="163" height="30"/>
+                                <state key="normal" title="Find Inspirational Image"/>
+                                <connections>
+                                    <segue destination="HDG-kj-u6U" kind="show" id="iD1-Wq-030"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZBC-Y5-atR" firstAttribute="centerX" secondItem="AFm-2G-zvp" secondAttribute="centerX" id="Qeo-V3-Jho"/>
+                            <constraint firstItem="HEC-Dz-O22" firstAttribute="top" secondItem="ZBC-Y5-atR" secondAttribute="bottom" constant="20" id="XzB-7n-Fxf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="mfu-7c-azP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vgm-zL-gln" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2160.8000000000002" y="404.34782608695656"/>
+        </scene>
+        <!--Find Inspirational Image-->
+        <scene sceneID="ZnP-eZ-eNU">
+            <objects>
+                <viewController id="HDG-kj-u6U" customClass="ArtViewController" customModule="euakarn_liengtiraphan_project2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UYb-ae-tMf"/>
+                        <viewControllerLayoutGuide type="bottom" id="Cft-0I-Aak"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Q2U-5J-tyv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hCj-Bw-I0q">
+                                <rect key="frame" x="36" y="114" width="303" height="459"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" horizontalCompressionResistancePriority="749" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="gwz-0I-zXG">
+                                        <rect key="frame" x="0.0" y="0.0" width="303" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Image URL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Zl-J3-jvK">
+                                                <rect key="frame" x="0.0" y="0.0" width="83.5" height="50"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ahK-dc-zIf">
+                                                <rect key="frame" x="103.5" y="0.0" width="199.5" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="Awf-pa-9e7"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tOk-0c-VGk">
+                                        <rect key="frame" x="0.0" y="50" width="303" height="50"/>
+                                        <state key="normal" title="Search"/>
+                                        <connections>
+                                            <action selector="fetchImage:" destination="HDG-kj-u6U" eventType="touchUpInside" id="W55-fF-7nJ"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="mwQ-Ys-x6f">
+                                        <rect key="frame" x="0.0" y="100" width="303" height="359"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pencilonly" translatesAutoresizingMaskIntoConstraints="NO" id="nEB-gl-7Hc">
+                                                <rect key="frame" x="0.0" y="0.0" width="303" height="359"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="tOk-0c-VGk" firstAttribute="height" secondItem="gwz-0I-zXG" secondAttribute="height" id="ej4-Vl-Jpc"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="Cft-0I-Aak" firstAttribute="top" secondItem="hCj-Bw-I0q" secondAttribute="bottom" constant="50" id="Oao-5R-pZI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hCj-Bw-I0q" secondAttribute="trailing" constant="20" id="hEU-my-QZ9"/>
+                            <constraint firstItem="hCj-Bw-I0q" firstAttribute="leading" secondItem="Q2U-5J-tyv" secondAttribute="leadingMargin" constant="20" id="k0J-Uf-crg"/>
+                            <constraint firstItem="hCj-Bw-I0q" firstAttribute="top" secondItem="UYb-ae-tMf" secondAttribute="bottom" constant="50" id="xe5-Xr-yBL"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="asb-LR-C0r" appends="YES" id="COM-6t-4YI"/>
+                        </connections>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Find Inspirational Image" id="j4F-oz-SzN"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="imageView" destination="nEB-gl-7Hc" id="tn1-ad-B3L"/>
+                        <outlet property="urlField" destination="ahK-dc-zIf" id="ASt-4E-Fml"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6WY-AZ-4zc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="asb-LR-C0r">
+                    <connections>
+                        <action selector="leaveKeyboard:" destination="HDG-kj-u6U" id="B32-Fg-mhl"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="3239.1999999999998" y="403.44827586206901"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yl2-sM-qoP">
+            <objects>
+                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="Tlz-Yq-4CX" kind="relationship" relationship="viewControllers" id="SHF-bS-584"/>
+                        <segue destination="Fu2-Ss-1mH" kind="relationship" relationship="viewControllers" id="X1F-XV-RWA"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+        <!--Characters-->
+        <scene sceneID="UR1-Ma-qEc">
+            <objects>
+                <viewController id="Z41-go-LTO" customClass="HumansViewController" customModule="euakarn_liengtiraphan_project2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7YQ-r6-opM"/>
+                        <viewControllerLayoutGuide type="bottom" id="JzX-TX-WwR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FZh-mY-euV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to be inspired" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9fk-Cy-dFO">
+                                <rect key="frame" x="36" y="305" width="303" height="58"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                <color key="textColor" red="0.51764705879999995" green="0.38431372549999998" blue="0.4039215686" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.8943882688" blue="0.86610865650000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="9fk-Cy-dFO" firstAttribute="centerY" secondItem="FZh-mY-euV" secondAttribute="centerY" id="13r-GF-Ghf"/>
+                            <constraint firstItem="9fk-Cy-dFO" firstAttribute="centerX" secondItem="FZh-mY-euV" secondAttribute="centerX" id="Zu2-zj-DcT"/>
+                            <constraint firstItem="9fk-Cy-dFO" firstAttribute="leading" secondItem="FZh-mY-euV" secondAttribute="leadingMargin" constant="20" id="iTI-oL-Dpe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9fk-Cy-dFO" secondAttribute="trailing" constant="20" id="okQ-Bs-lC3"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="j2x-ow-72r" appends="YES" id="zkw-PG-Y5Y"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" title="Characters" id="R9W-Hc-AK7">
+                        <barButtonItem key="rightBarButtonItem" title="Add Prompt" id="7al-O7-V74">
+                            <connections>
+                                <segue destination="LMn-7q-9gC" kind="show" identifier="toCharacterAdd" id="1sn-Bf-v2l"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="characterPrompt" destination="9fk-Cy-dFO" id="RwB-Vf-ETJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yoE-oj-KIS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="j2x-ow-72r">
+                    <connections>
+                        <action selector="nextPrompt:" destination="Z41-go-LTO" id="HlQ-aq-ulr"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="2653" y="-2083"/>
+        </scene>
+        <!--Add Character Prompt-->
+        <scene sceneID="Gfj-Wf-hay">
+            <objects>
+                <viewController id="LMn-7q-9gC" customClass="CharacterAddViewController" customModule="euakarn_liengtiraphan_project2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="amC-Iy-Yq2"/>
+                        <viewControllerLayoutGuide type="bottom" id="TZ9-eS-Uqc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MRZ-vs-cAU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="lsC-2O-HvZ">
+                                <rect key="frame" x="16" y="114" width="343" height="454"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" text="Add your new character prompt here" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Msm-Hh-5GK">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="439"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" spellCheckingType="yes"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eph-bZ-qG0">
+                                        <rect key="frame" x="0.0" y="454" width="343" height="0.0"/>
+                                        <state key="normal" title="Add to character prompt list"/>
+                                        <connections>
+                                            <action selector="addCharacter:" destination="LMn-7q-9gC" eventType="touchUpInside" id="LoV-6P-n6i"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="lsC-2O-HvZ" firstAttribute="leading" secondItem="MRZ-vs-cAU" secondAttribute="leadingMargin" id="Aw8-Rv-bQZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lsC-2O-HvZ" secondAttribute="trailing" id="Fwm-fQ-uSl"/>
+                            <constraint firstItem="lsC-2O-HvZ" firstAttribute="top" secondItem="amC-Iy-Yq2" secondAttribute="bottom" constant="50" id="Ru7-Sj-SNU"/>
+                            <constraint firstItem="TZ9-eS-Uqc" firstAttribute="top" secondItem="lsC-2O-HvZ" secondAttribute="bottom" constant="50" id="qrn-6w-Am1"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="g4C-xI-Igp" appends="YES" id="le8-cd-Na9"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Character Prompt" id="uud-7e-yWP"/>
+                    <connections>
+                        <outlet property="characterText" destination="Msm-Hh-5GK" id="PwI-2U-V8P"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qHI-Dq-c2M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="g4C-xI-Igp">
+                    <connections>
+                        <action selector="leaveKeyboard:" destination="LMn-7q-9gC" id="TBF-Vd-6Yw"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="3726" y="-2084"/>
+        </scene>
+        <!--Creatures-->
+        <scene sceneID="Kib-Qt-Spj">
+            <objects>
+                <viewController id="Dci-x2-oMo" customClass="CreaturesViewController" customModule="euakarn_liengtiraphan_project2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jvb-6n-YL8"/>
+                        <viewControllerLayoutGuide type="bottom" id="KZQ-sa-kMv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7P5-Ba-aWD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to be inspired" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xxi-iE-pJa">
+                                <rect key="frame" x="36" y="276.5" width="303" height="115"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.9137254901960784" green="0.73725490196078436" blue="0.71764705882352942" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="xxi-iE-pJa" firstAttribute="centerX" secondItem="7P5-Ba-aWD" secondAttribute="centerX" id="IHj-7h-7ya"/>
+                            <constraint firstItem="xxi-iE-pJa" firstAttribute="centerY" secondItem="7P5-Ba-aWD" secondAttribute="centerY" id="oUH-rQ-ZEu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xxi-iE-pJa" secondAttribute="trailing" constant="20" id="uIa-o7-FL2"/>
+                            <constraint firstItem="xxi-iE-pJa" firstAttribute="leading" secondItem="7P5-Ba-aWD" secondAttribute="leadingMargin" constant="20" id="x9a-dB-E8m"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="tEq-aL-1b1" appends="YES" id="HGS-Sc-efi"/>
+                        </connections>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Creatures" id="sHB-Se-jTN">
+                        <barButtonItem key="rightBarButtonItem" title="Add Prompt" id="beQ-i6-rpr">
+                            <connections>
+                                <segue destination="TMx-oD-ufB" kind="show" identifier="toCreatureAdd" id="MRR-UL-B91"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="creaturePrompt" destination="xxi-iE-pJa" id="7eQ-3o-xCF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T8W-e6-cZS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="tEq-aL-1b1">
+                    <connections>
+                        <action selector="newPrompt:" destination="Dci-x2-oMo" id="Lye-Zj-N8d"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="2572" y="-1323"/>
+        </scene>
+        <!--Add Creature Prompt-->
+        <scene sceneID="NsC-4U-lfv">
+            <objects>
+                <viewController id="TMx-oD-ufB" customClass="CreatureAddViewController" customModule="euakarn_liengtiraphan_project2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ENU-bh-yjn"/>
+                        <viewControllerLayoutGuide type="bottom" id="5Xt-Qe-sWn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mPT-mO-I0W">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="HHE-wS-Nvi">
+                                <rect key="frame" x="16" y="114" width="343" height="454"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" text="Add your new creature prompt here" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="SJA-xI-6Ce">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="439"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" spellCheckingType="yes"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xjv-bS-Wt0">
+                                        <rect key="frame" x="0.0" y="454" width="343" height="0.0"/>
+                                        <state key="normal" title="Add to creature prompt list"/>
+                                        <connections>
+                                            <action selector="addCreature:" destination="TMx-oD-ufB" eventType="touchUpInside" id="g55-Tl-lxe"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="HHE-wS-Nvi" firstAttribute="top" secondItem="ENU-bh-yjn" secondAttribute="bottom" constant="50" id="1Qe-5j-8sc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HHE-wS-Nvi" secondAttribute="trailing" id="GqW-uV-bdw"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="HHE-wS-Nvi" secondAttribute="leading" id="giy-mr-gQN"/>
+                            <constraint firstItem="5Xt-Qe-sWn" firstAttribute="top" secondItem="HHE-wS-Nvi" secondAttribute="bottom" constant="50" id="stz-9c-WpU"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Fcb-lP-O3t" appends="YES" id="nfa-d1-AlH"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Creature Prompt" id="eTt-ky-cth"/>
+                    <connections>
+                        <outlet property="characterText" destination="SJA-xI-6Ce" id="FMh-I8-NhQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MI9-R2-uvp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Fcb-lP-O3t">
+                    <connections>
+                        <action selector="leaveKeyboard:" destination="TMx-oD-ufB" id="cc7-kn-Vem"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="3726" y="-1324"/>
+        </scene>
+        <!--Prompts-->
+        <scene sceneID="Bqr-Ob-mmw">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Tlz-Yq-4CX" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Prompts" image="A" id="B0J-aQ-hxf"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="E2d-Oc-ICM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Ftb-Fx-klq" kind="relationship" relationship="rootViewController" id="RLh-wl-gxt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YaI-YE-ucx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="773.60000000000002" y="-1021.4392803598201"/>
+        </scene>
+        <!--Share-->
+        <scene sceneID="pD2-dj-9Ff">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Fu2-Ss-1mH" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Share" image="sketchbook" id="2sv-To-qsB"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Tjk-py-PYN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="cE0-OU-VXl" kind="relationship" relationship="rootViewController" id="vUo-Ep-P2T"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gKL-up-NYb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1221.5999999999999" y="404.34782608695656"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="A" width="15" height="15"/>
+        <image name="Home" width="11" height="26"/>
+        <image name="happy" width="25" height="25"/>
+        <image name="location" width="16" height="25"/>
+        <image name="object" width="29" height="31"/>
+        <image name="pencilonly" width="224" height="397"/>
+        <image name="puppy" width="35" height="26"/>
+        <image name="situation" width="25" height="27"/>
+        <image name="sketchbook" width="31" height="32"/>
+    </resources>
+</document>
