@@ -24,6 +24,7 @@
 		E3B4F7D61DF5243100E8CD90 /* Locations.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B4F7D51DF5243100E8CD90 /* Locations.swift */; };
 		E3B4F7D81DF5243D00E8CD90 /* Objects.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B4F7D71DF5243D00E8CD90 /* Objects.swift */; };
 		E3B4F7DA1DF5244C00E8CD90 /* Situations.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B4F7D91DF5244C00E8CD90 /* Situations.swift */; };
+		E3CC13661E79D2DD00581336 /* totalPrompts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E3CC13641E79D2DD00581336 /* totalPrompts.xcdatamodeld */; };
 		E3CD25301DC9293900A03545 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CD252F1DC9293900A03545 /* AppDelegate.swift */; };
 		E3CD25321DC9293900A03545 /* Hello.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CD25311DC9293900A03545 /* Hello.swift */; };
 		E3CD25341DC9293900A03545 /* CreaturesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CD25331DC9293900A03545 /* CreaturesViewController.swift */; };
@@ -76,6 +77,7 @@
 		E3B4F7D51DF5243100E8CD90 /* Locations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Locations.swift; sourceTree = "<group>"; };
 		E3B4F7D71DF5243D00E8CD90 /* Objects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Objects.swift; sourceTree = "<group>"; };
 		E3B4F7D91DF5244C00E8CD90 /* Situations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Situations.swift; sourceTree = "<group>"; };
+		E3CC13651E79D2DD00581336 /* totalPrompts.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = totalPrompts.xcdatamodel; sourceTree = "<group>"; };
 		E3CD252C1DC9293900A03545 /* euakarn_liengtiraphan_project2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = euakarn_liengtiraphan_project2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3CD252F1DC9293900A03545 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3CD25311DC9293900A03545 /* Hello.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hello.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				E3CD252F1DC9293900A03545 /* AppDelegate.swift */,
+				E3CC13641E79D2DD00581336 /* totalPrompts.xcdatamodeld */,
 				E3CD25311DC9293900A03545 /* Hello.swift */,
 				E3B4EF8D1DCE3CB7004BF95F /* Creatures.swift */,
 				E3CD25331DC9293900A03545 /* CreaturesViewController.swift */,
@@ -276,7 +279,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0810;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = Som;
 				TargetAttributes = {
 					E3CD252B1DC9293800A03545 = {
@@ -354,6 +357,7 @@
 			files = (
 				E3B4F7D81DF5243D00E8CD90 /* Objects.swift in Sources */,
 				E330C4881DFFB66B0046D635 /* SituationViewController.swift in Sources */,
+				E3CC13661E79D2DD00581336 /* totalPrompts.xcdatamodeld in Sources */,
 				E3CD25341DC9293900A03545 /* CreaturesViewController.swift in Sources */,
 				E330C4821DFFB6370046D635 /* LocationAddViewController.swift in Sources */,
 				E3CD25301DC9293900A03545 /* AppDelegate.swift in Sources */,
@@ -440,6 +444,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -491,6 +496,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -642,6 +648,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E3CC13641E79D2DD00581336 /* totalPrompts.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E3CC13651E79D2DD00581336 /* totalPrompts.xcdatamodel */,
+			);
+			currentVersion = E3CC13651E79D2DD00581336 /* totalPrompts.xcdatamodel */;
+			path = totalPrompts.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = E3CD25241DC9293800A03545 /* Project object */;
 }
