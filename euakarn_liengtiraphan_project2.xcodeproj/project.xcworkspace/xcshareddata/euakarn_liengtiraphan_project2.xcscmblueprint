@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "91E8F3C8494D4581EACF71E7620491885E6A485D",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "91E8F3C8494D4581EACF71E7620491885E6A485D" : 9223372036854775807,
+    "14CE1F97AA6B9B5887EDA0DD6793CF590E2FC814" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "C18405C1-F03D-4A42-980A-8FCF3D025F0E",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "91E8F3C8494D4581EACF71E7620491885E6A485D" : "Sparkr\/",
+    "14CE1F97AA6B9B5887EDA0DD6793CF590E2FC814" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "euakarn_liengtiraphan_project2",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "euakarn_liengtiraphan_project2.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/somlieng\/Sparkr.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "14CE1F97AA6B9B5887EDA0DD6793CF590E2FC814"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/somlieng\/Sparkr.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "91E8F3C8494D4581EACF71E7620491885E6A485D"
+    }
+  ]
+}
